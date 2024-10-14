@@ -78,14 +78,13 @@ body {
 
         .menuLinks {
           color: silver;
-          font-size: 1.3em;
+          font-size: 1em;
           font-weight: 550;
           text-decoration: none;
         }
 
         .menuLinks:hover {
           color: chartreuse;
-          font-weight: 550;
         }
       }
     }
