@@ -1,121 +1,138 @@
-/* Reset General */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Configuracion Fuente */
 @font-face {
   font-family: "miFuente";
   src: url("../fonts/calibri.ttf");
 }
 
-/* Medidas de referencia HTML */
 html {
   font-size: 100%;
   width: 100%;
   height: 100%;
 }
 
-/* Configuracion del Body */
 body {
   background: azure;
   font-family: miFuente;
   font-size: 100%;
 
-  /* Estructura Desktop */
-  .generalContainer {
+  /* ESTRUCTURA DESKTOP */
+  .contenedorGeneral {
     width: 100%;
     height: 100vh;
     min-height: 100%;
+    background: black;
     display: flex;
     flex-direction: column;
 
-    .header {
-      flex: 0 0 35%;
+    .cabecera {
+      flex: 1 1 20%;
       display: flex;
-      justify-content: space-between;
-      background-image: url("../images/fondoCabecera.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: 1000;
-      width: inherit;
-      box-shadow: 1rem 0.5rem 0.5rem black;
+      justify-content: space-around;
 
       .logo {
-        flex: 0 0 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .logo img {
-          display: block;
-          width: 100%;
-          height: auto;
-          object-fit: contain;
-        }
+        flex: 1 1 20%;
+        background: beige;
       }
 
-      .icon-menu {
-        font-size: 1.6em;
-        color: silver;
+      .menu_contenedor {
+        background: cadetblue;
+        flex: 1 1 70%;
+      }
+
+      .hamburguesa {
         display: none;
-      }
-
-      .menu {
-        padding: 3px;
-        margin-top: 5px;
-        margin-right: 20px;
-        display: flex;
-        gap: 5px;
-        list-style: none;
-
-        .menuItems {
-          padding: 2px 5px;
-        }
-
-        .menuLinks {
-          color: silver;
-          font-size: 1em;
-          font-weight: 550;
-          text-decoration: none;
-        }
-
-        .menuLinks:hover {
-          color: chartreuse;
-        }
+        background: pink;
+        flex: 1 1 10%;
       }
     }
 
     .main {
-      background: cyan;
-      flex: 0 0 50%;
+      flex: 1 1 60%;
+      width: 90%;
+      margin: auto;
       display: flex;
       flex-direction: column;
 
-      .contenidoMain {
-        border: 1px solid red;
-        width: 80%;
-        margin: 0 auto;
-        flex: auto;
+      .inicio {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .slider {
+          flex: 1 1 70%;
+          background: blue;
+        }
+
+        .textoInicio {
+          flex: 1 1 30%;
+          background: rgb(105, 105, 150);
+        }
+      }
+
+      .mision {
+        flex: 1;
+        background: chartreuse;
+      }
+
+      .vision {
+        flex: 1;
+        background: green;
+      }
+
+      .terminos {
+        flex: 1;
+        background: gray;
       }
     }
 
-    .footer {
-      background: pink;
-      flex: 0 0 15%;
+    .pie {
+      flex: 1 1 20%;
+      display: flex;
+      flex-direction: column;
+
+      .facebook {
+        flex: 1 1 50%;
+        background: aqua;
+      }
+
+      .email {
+        flex: 1 1 20%;
+        background: lemonchiffon;
+      }
+
+      .whatsapp {
+        flex: 1 1 30%;
+        background: brown;
+      }
     }
   }
 
-  /* MOBILE RESPONSIVE */
+  /* ESTRUCTURA PARA DISPOSITIVOS MOVILES */
 
   @media (max-width: 768px) {
+    .contenedorGeneral {
+      .cabecera {
+        .menu_contenedor {
+          display: none;
+        }
+
+        .hamburguesa {
+          display: block;
+        }
+      }
+
+      .main {
+        width: 100%;
+      }
+    }
   }
 
-
-  /* Celulares Landscape */
+  /* ESTRUCTURA MOVIL LANDSCAPE */
   @media only screen and (orientation: landscape) {
   }
 }
